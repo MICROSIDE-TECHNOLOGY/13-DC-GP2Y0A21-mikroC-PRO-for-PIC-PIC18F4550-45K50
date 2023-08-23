@@ -11,14 +11,14 @@ Driver Version    :  1.0
 ********************************************************************************/
 
 /*******************************************************************************
-Para usar el cï¿½digo con bootloader, configurar como lo indica MICROSIDE:
+Para usar el código con bootloader, configurar como lo indica MICROSIDE:
 1) Tools> Options> Output> Output Settings> Marcar "Long HEX format"
 2) Project> Edit Project> Insertar 48.000000 en "MCU Clock Frequency [MHz]" box
 ********************************************************************************/
 
 #pragma orgall 0x1FFF
 
-int VALOR_ADC;                              //Variable para almacenar el valor leï¿½do del ADC
+int VALOR_ADC;                              //Variable para almacenar el valor leído del ADC
 
 void main(void) org 0x2000
 {
@@ -26,7 +26,7 @@ void main(void) org 0x2000
      PWM1_Init (5000);                      // Inicializa PWM a 5000 Hz
      PWM1_Start ();
      TRISA0_bit = 1;                        //PIN como entrada
-     ANSA0_bit = 1;                         //PIN como analï¿½gico
+     ANSA0_bit = 1;                         //PIN como analógico
      ADC_Init_Advanced(_ADC_INTERNAL_REF);  //Voltaje de referencia a VDD y GND
 
      while (1)
